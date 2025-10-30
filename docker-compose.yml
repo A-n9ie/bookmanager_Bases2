@@ -1,0 +1,8 @@
+services:
+  web:
+    build: .
+    ports:
+      - "8080:80"
+    volumes:
+      - ./grupo1-3pm:/var/www/html
+    container_name: book_manager_grupo1
