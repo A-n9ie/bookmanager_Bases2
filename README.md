@@ -1,5 +1,5 @@
-### 🚀 Primera vez (construir la imagen y ejecutar)
 En la carpeta raiz del proyecto, ejecutar los comandos:
+### 🚀 Primera vez (construir la imagen y ejecutar)
 
 docker build -t proyectodatos2-web .
 
