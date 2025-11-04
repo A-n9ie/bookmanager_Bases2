@@ -21,11 +21,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 ?>
-
-<h2>Iniciar Sesión</h2>
-<form method="POST">
-    <input type="text" name="username" placeholder="Usuario" required><br>
-    <input type="password" name="password" placeholder="Contraseña" required><br>
-    <button type="submit">Entrar</button>
-</form>
-<?php if(isset($error)) echo "<p style='color:red;'>$error</p>"; ?>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h2>Iniciar Sesión</h2>
+    <form method="POST">
+        <input type="text" name="username" placeholder="Usuario" required><br>
+        <input type="password" name="password" placeholder="Contraseña" required><br>
+        <button type="submit">Entrar</button>
+    </form>
+    <?php if(isset($error)) echo "<p style='color:red;'>$error</p>"; ?>
+</body>
+</html>

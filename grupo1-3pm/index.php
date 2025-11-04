@@ -10,8 +10,16 @@ if (!file_exists($dbFile)) {
 // Conexión a la BD
 $db = new PDO('sqlite:' . $dbFile);
 $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-// Mostrar inicio básico
-echo "<h2>📚 Bienvenido a tu Biblioteca Personal</h2>";
-echo "<p><a href='login.php'>Iniciar sesión</a></p>";
 ?>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Inicio - Biblioteca</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h2>📚 Bienvenido a tu Biblioteca Personal</h2>
+    <p><a href="login.php">Iniciar sesión</a></p>
+</body>
+</html>
