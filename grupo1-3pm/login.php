@@ -24,17 +24,34 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Iniciar Sesión</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Iniciar Sesión</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=7">
 </head>
 <body>
-    <h2>Iniciar Sesión</h2>
-    <form method="POST">
-        <input type="text" name="username" placeholder="Usuario" required><br>
-        <input type="password" name="password" placeholder="Contraseña" required><br>
-        <button type="submit">Entrar</button>
+  <!-- Título flotante, igual concepto que en index -->
+  <h1 class="main-title">🔐 Acceso al Sistema</h1>
+
+  <!-- Panel de login centrado -->
+  <div class="form-container text-start">
+    <h2 class="mb-3 text-center" style="margin-top:-8px;">Iniciar Sesión</h2>
+    <form method="POST" autocomplete="off" novalidate>
+      <div class="mb-3">
+        <label class="form-label">Usuario</label>
+        <input type="text" name="username" class="form-control" placeholder="Ingresa tu usuario" required>
+      </div>
+      <div class="mb-2">
+        <label class="form-label">Contraseña</label>
+        <input type="password" name="password" class="form-control" placeholder="••••••••" required>
+      </div>
+      <button type="submit" class="btn btn-custom w-100 mt-3">Entrar</button>
+
+      <?php if(isset($error)): ?>
+        <div class="alert alert-warning mt-3 mb-0 text-center"><?php echo htmlspecialchars($error); ?></div>
+      <?php endif; ?>
     </form>
-    <?php if(isset($error)) echo "<p style='color:red;'>$error</p>"; ?>
+  </div>
 </body>
 </html>
