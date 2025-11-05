@@ -5,4 +5,4 @@ services:
       - "8080:80"
     volumes:
       - ./grupo1-3pm:/var/www/html
-    container_name: book_manager_grupo1
+    container_name: book_manager_grupo1_1
