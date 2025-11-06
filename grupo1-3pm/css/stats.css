@@ -1,0 +1,57 @@
+.charts-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 20px;
+}
+
+.chart-box {
+    flex: 1 1 400px;
+    padding: 1rem;
+    background: rgba(255, 215, 0, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.chart-box h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-family: 'Cinzel Decorative', serif;
+}
+/* Estilo adicional para estadísticas */
+.stats-container {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: rgba(255,255,255,0.9);
+    border-radius: 10px;
+}
+.chart-box {
+    margin: 30px 0;
+}
+.chart-box canvas {
+    width: 100% !important;
+    max-width: 800px;
+    height: 400px !important;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 8px;        
+    padding: 8px 12px; 
+    border-radius: 6px;
+    font-size: 1.1rem;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: 20px;  
+    height: 20px; 
+}

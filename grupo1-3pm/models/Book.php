@@ -65,5 +65,38 @@ class Book {
         $stmt->execute($params);
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
+	
+	public function getBooksAdvanced($searchTerm = '', $selectedGenres = [], $yearFrom = '', $yearTo = '', $order = 'desc') {
+    $sql = "SELECT * FROM books WHERE 1=1";
+    $params = [];
+
+    if ($searchTerm) {
+        $sql .= " AND (title LIKE :search OR author LIKE :search)";
+        $params[':search'] = "%$searchTerm%";
+    }
+
+    if ($selectedGenres && is_array($selectedGenres)) {
+        $placeholders = implode(',', array_fill(0, count($selectedGenres), '?'));
+        $sql .= " AND genre IN ($placeholders)";
+        $params = array_merge($params, $selectedGenres);
+    }
+
+    if ($yearFrom) {
+        $sql .= " AND year >= ?";
+        $params[] = $yearFrom;
+    }
+    if ($yearTo) {
+        $sql .= " AND year <= ?";
+        $params[] = $yearTo;
+    }
+
+    $sql .= " ORDER BY year $order";
+
+    $stmt = $this->db->prepare($sql);
+    $stmt->execute($params);
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+}
+
+
 }
 ?>

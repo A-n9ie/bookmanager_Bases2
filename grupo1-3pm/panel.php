@@ -77,6 +77,7 @@ $genres = $book->getGenres();
     <a href="add.php" class="btn-golden">➕ Agregar nuevo libro</a>
 	<a href="export.php?type=pdf&<?= http_build_query($_GET) ?>" class="btn-golden">📄 Exportar PDF</a>
 	<a href="export.php?type=excel&<?= http_build_query($_GET) ?>" class="btn-golden">📊 Exportar Excel</a>
+	<a href="stats.php" class="btn-golden">📊 Ver estadísticas</a>
   </div>
   
 
