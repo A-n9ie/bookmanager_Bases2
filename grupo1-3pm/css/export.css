@@ -1,0 +1,48 @@
+body {
+  font-family: 'DejaVu Sans', sans-serif;
+  color: #333;
+  font-size: 11pt;
+}
+
+.header {
+  text-align: center;
+  border-bottom: 2px solid #4a90e2;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+}
+
+h2 {
+  color: #2c3e50;
+  margin: 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th {
+  background: #4a90e2;
+  color: white;
+  padding: 8px;
+  text-align: left;
+}
+
+td {
+  padding: 7px;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+.footer {
+  text-align: center;
+  font-size: 10pt;
+  color: #777;
+  margin-top: 25px;
+  border-top: 1px solid #ddd;
+  padding-top: 5px;
+}

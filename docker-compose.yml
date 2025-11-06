@@ -1,8 +1,12 @@
+version: '3.8'
+
 services:
   web:
     build: .
+    container_name: book_manager_grupo1
     ports:
       - "8080:80"
     volumes:
       - ./grupo1-3pm:/var/www/html
-    container_name: book_manager_grupo1_1
+      - ./grupo1-3pm/db:/var/www/html/db 
+      - /var/www/html/vendor
